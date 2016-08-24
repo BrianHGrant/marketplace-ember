@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   authUser: [],
-  ifAuth: true,
+  ifAuth: false,
 
   login(user) {
     this.get('authUser').empty
