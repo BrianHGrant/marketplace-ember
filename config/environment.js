@@ -1,5 +1,4 @@
 /* jshint node: true */
-
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'market-place',
@@ -12,6 +11,12 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    firebase: {
+      apiKey: "AIzaSyBvf3embF1IBFMURB-AxRUoSWv2VXS4-ig",
+      authDomain: "marketplace-8395a.firebaseapp.com",
+      databaseURL: "https://marketplace-8395a.firebaseio.com",
+      storageBucket: "marketplace-8395a.appspot.com",
+      },
 
     APP: {
       // Here you can pass flags/options to your application instance
