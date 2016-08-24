@@ -1,0 +1,23 @@
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    {{input value=name id="name" required="required"}}
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    {{input value=description id="description" required="required"}}
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    {{input value=price id="price" required="required"}}
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    {{input value=category id="category" required="required"}}
+  </div>
+
+  <button {{action 'sellNewItem'}}>Sell Item</button>
+</form>
