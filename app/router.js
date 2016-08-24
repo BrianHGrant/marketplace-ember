@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('login');
   this.route('signup');
   this.route('shopping-cart');
+  this.route('new-item');
 });
 
 export default Router;
