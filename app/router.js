@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('shopping-cart');
   this.route('new-item');
   this.route('item', {path: '/item/:item_id'});
+  this.route('logout');
 });
 
 export default Router;

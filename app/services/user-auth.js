@@ -5,8 +5,7 @@ export default Ember.Service.extend({
   ifAuth: false,
 
   login(user) {
-    this.get('authUser').empty
-    this.get('authUser').pushObject(user);
+    this.set('authUser', [user]);
     this.set('ifAuth', true);
     console.log(this.get('authUser')[0]);
   }
