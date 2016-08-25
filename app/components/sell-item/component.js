@@ -7,10 +7,10 @@ export default Ember.Component.extend({
         name: this.get('name'),
         description: this.get('description'),
         category: this.get('category'),
-        price: this.get('price'),
-        user: this.get('userAuth').authUser[0]
+        price: parseInt(this.get('price')),
+        // user: "this.get('userAuth').authUser[0]"
+        user: "matthew"
       };
-      console.log(params.user);
     this.sendAction('sellNewItem', params);
     }
   }

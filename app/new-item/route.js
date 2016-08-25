@@ -1,16 +1,16 @@
 import Ember from 'ember';
 export default Ember.Route.extend({
   userAuth: Ember.inject.service(),
+  shoppingCart: Ember.inject.service(),
   actions:  {
     sellNewItem(params) {
       var newItem = this.store.createRecord('item', params);
-      console.log(this.get('userAuth.userId'));
-      var user = this.store.findRecord('user', this.get('userAuth.userId'));
-      console.log(this.store.findRecord('user', this.get('userAuth.userId')));
-      user.get('items').addObject(newItem);
+      var currentAuthUser = this.get('userAuth.authUser');
+      currentAuthUser[0].get('items').addObject(newItem);
       newItem.save().then(function(){
-        return user.save();
+        currentAuthUser[0].save();
       });
+      this.get("shoppingCart").addToCart(newItem);
     }
   }
 });
