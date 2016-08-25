@@ -8,14 +8,14 @@ export default Ember.Service.extend({
     this.get('items').pushObject(item);
     var price = this.get('totalCost');
     console.log(this.get('items'));
-    price += item.price;
+    price += item.get('price');
     this.set('totalCost', price);
     console.log(this.get('totalCost'));
   },
   removeFromCart(item)  {
     this.get('items').removeObject(item);
     var price = this.get('totalCost')
-    price -= item.price;
+    price -= item.get('price');
     this.set('totalCost', price);
   }
 });
