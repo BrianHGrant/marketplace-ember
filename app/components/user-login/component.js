@@ -5,8 +5,8 @@ export default Ember.Component.extend({
   actions: {
     loginUser() {
       var params = {
-        // email: this.get("email")
-        email: 'matthew',
+        email: this.get("email")
+        // email: 'matthew',
       };
       this.sendAction('loginUser', params);
     }

@@ -5,5 +5,5 @@ export default DS.Model.extend({
   description: DS.attr(),
   price: DS.attr(),
   category: DS.attr(),
-  user: DS.belongsTo('user', { async: true })
+  user: DS.belongsTo('user', { async: true})
 });
