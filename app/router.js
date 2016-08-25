@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('signup');
   this.route('shopping-cart');
   this.route('new-item');
+  this.route('item', {path: '/item/:item_id'});
 });
 
 export default Router;
